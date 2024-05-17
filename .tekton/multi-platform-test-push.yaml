@@ -14,7 +14,7 @@ metadata:
     appstudio.openshift.io/component: multi-platform-test
     pipelines.appstudio.openshift.io/type: build
   name: multi-platform-test-on-push
-  namespace: NAMESPACE
+  namespace: test-rhtap-8-tenant
 spec:
   params:
   - name: dockerfile
@@ -22,7 +22,7 @@ spec:
   - name: git-url
     value: '{{repo_url}}'
   - name: output-image
-    value: quay.io/QUAY_REPO/NAMESPACE/multi-platform-test/multi-platform-test:{{revision}}
+    value: quay.io/redhat-user-workloads-stage/test-rhtap-8-tenant/multi-platform-test/multi-platform-test:{{revision}}
   - name: path-context
     value: .
   - name: revision
